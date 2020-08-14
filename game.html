@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ROCK,PAPER,SCISSORS</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+.container img:hover {
+      box-shadow:0px 10px 50px rgba(0, 50,250,25) ;
+       } 
+       div.container{
+           display:flex;
+           flex-wrap:wrap;
+           justify-content:space-around;
+           margin-top: 140px;
+           padding-top: 30px;
+          border:5px groove blue;
+          border-style: inset;
+          height:350px;
+          border-radius: 10px;
+          background-color:white;
+       }
+
+     div.color{
+        background:url(http://diary.sicis.com/wp-content/uploads/2018/03/FLO-1-Cristal-DET11x1.jpg);
+        display:flex;
+        height:620px;
+        }  
+      div.footer{
+          text-align: end;
+          padding-right: 10px;
+          color: white;
+          font-size: 15px;
+          background-color:teal;
+          
+      }     
+
+      
+    </style>
+</head>
+  <body >
+  <div class="color">
+    <div class="container" id="image-div">
+    <img id="rock" src="https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300" height=250 width=250 alt="" onclick="game(rock)">
+    <img id="paper"  src="http://clipartmag.com/images/piece-of-paper-clipart-3.jpg" height=250 width=250 aly="" onclick="game(paper)">
+    <img id="scissors" src="https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300" alt="" width=250 height=250 onclick="game(scissors)">  
+     </div></div>
+     <script type="text/javascript">
+        
+        
+         function game(mychoice)
+         {
+             
+             document.getElementById('rock').remove();
+             document.getElementById('paper').remove();
+             document.getElementById('scissors').remove();
+             var a=Math.floor(Math.random()*3);
+            var choice= document.createElement('div');
+            var pc= document.createElement('div');
+            var message= document.createElement('div');
+            //var x=mychoice.src;
+           // var choice=document.createElement('div');
+           
+         //  document.getElementById("image-div").innerHTML="hi";
+//var database ={
+              //  'rock':document.getElementById('rock'),
+              //  'paper':doucment.getElementById('paper').src
+        //  }
+           // console.log(mychoice.src)
+           // choice.innerhtml="hi";
+         //  document.body.appendChild(choice);
+             //var b=['rock','paper','scissors'];
+             if(mychoice.id=='rock'){
+                if(a==0)
+                {
+                    choice.innerHTML="<img src='https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300' style='box-shadow:0px 10px 50px rgba(37,50,233,1);' >";
+            document.getElementById("image-div").appendChild(choice);
+                message.innerHTML="<h1 style='color:yellow; font-size:70px;padding:30px;padding-top:80px;'>Tied!!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                pc.innerHTML= "<img src='https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300' style='box-shadow:0px 10px 50px rgba(243,38,24,1);' >";
+                document.getElementById("image-div").appendChild(pc);             
+               }
+               //console.log('a Won');
+               if(a==1)
+               {
+               choice.innerHTML="<img src='https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300' style='box-shadow:0px 10px 50px rgba(37,50,233,1);' >";
+            document.getElementById("image-div").appendChild(choice);
+            message.innerHTML="<h1 style='color:red; font-size:70px;padding:30px;padding-top:80px;'>You Lose!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                pc.innerHTML= "<img src='http://clipartmag.com/images/piece-of-paper-clipart-3.jpg'  style='box-shadow:0px 10px 50px rgba(243,38,24,1);width:250px;' >";
+                document.getElementById("image-div").appendChild(pc); 
+            }
+            if(a==2)
+            { 
+                choice.innerHTML="<img src='https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300' style='box-shadow:0px 10px 50px rgba(37,50,233,1);' >";
+            document.getElementById("image-div").appendChild(choice);
+            message.innerHTML="<h1 style='color:green; font-size:70px;padding:30px;padding-top:80px;'>You Win!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                pc.innerHTML= "<img src='https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300'  style='box-shadow:0px 10px 50px rgba(243,38,24,1);width:250px;' >";
+                document.getElementById("image-div").appendChild(pc); 
+            
+            }
+             }
+            if(mychoice.id=='paper'){
+                if(a==0){
+                  //  choice.innerHTML="<img src='https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300' style='box-shadow:0px 10px 50px rgba(37,50,233,1);' >";
+           // document.getElementById("image-div").appendChild(choice);
+                 choice.innerHTML="<img src= 'http://clipartmag.com/images/piece-of-paper-clipart-3.jpg'  style='box-shadow:0px 10px 50px rgba(37,50,233,1);width:250px;' >";  
+                    document.getElementById("image-div").appendChild(choice);
+                    message.innerHTML="<h1 style='color:green; font-size:70px;padding:30px;padding-top:80px;'>You Win!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                    pc.innerHTML= "<img src='https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300' style='box-shadow:0px 10px 50px rgba(243,38,24,1);' >";
+                document.getElementById("image-div").appendChild(pc);        
+               
+                }
+              
+               if(a==1){
+                choice.innerHTML="<img src= 'http://clipartmag.com/images/piece-of-paper-clipart-3.jpg'  style='box-shadow:0px 10px 50px rgba(37,50,233,1);width:250px;' >";  
+                    document.getElementById("image-div").appendChild(choice);
+                    message.innerHTML="<h1 style='color:yellow; font-size:70px;padding:30px;padding-top:80px;'>Tied!!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                pc.innerHTML= "<img src='http://clipartmag.com/images/piece-of-paper-clipart-3.jpg'  style='box-shadow:0px 10px 50px rgba(243,38,24,1);width:250px;' >";
+                document.getElementById("image-div").appendChild(pc); 
+               }
+           
+               if(a==2){
+                choice.innerHTML="<img src= 'http://clipartmag.com/images/piece-of-paper-clipart-3.jpg'  style='box-shadow:0px 10px 50px rgba(37,50,233,1);width:250px;' >";  
+                    document.getElementById("image-div").appendChild(choice);
+                    message.innerHTML="<h1 style='color:red; font-size:70px;padding:30px;padding-top:80px;'>You Lose!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                pc.innerHTML= "<img src='https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300'  style='box-shadow:0px 10px 50px rgba(243,38,24,1);width:250px;' >";
+                document.getElementById("image-div").appendChild(pc); 
+               }
+            }
+            if(mychoice.id=='scissors'){
+                if(a==0){
+                    choice.innerHTML="<img src= 'https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300'   style='box-shadow:0px 10px 50px rgba(37,50,233,1);width:250px;' >";
+                    document.getElementById("image-div").appendChild(choice);
+                    message.innerHTML="<h1 style='color:red; font-size:70px;padding:30px;padding-top:80px;'>You Lose!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                pc.innerHTML= "<img src='https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300' style='box-shadow:0px 10px 50px rgba(243,38,24,1);' >";
+                document.getElementById("image-div").appendChild(pc);
+
+                }
+              
+               if(a==1)
+               {
+                choice.innerHTML="<img src= 'https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300'   style='box-shadow:0px 10px 50px rgba(37,50,233,1);width:250px;' >";
+                    document.getElementById("image-div").appendChild(choice);
+                    message.innerHTML="<h1 style='color:green; font-size:70px;padding:30px;padding-top:80px;'>You Win!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                    pc.innerHTML= "<img src='http://clipartmag.com/images/piece-of-paper-clipart-3.jpg'  style='box-shadow:0px 10px 50px rgba(243,38,24,1);width:250px;' >";
+                document.getElementById("image-div").appendChild(pc); 
+               }
+          
+              if(a==2)
+              {
+                choice.innerHTML="<img src= 'https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300'   style='box-shadow:0px 10px 50px rgba(37,50,233,1);width:250px;' >";
+                    document.getElementById("image-div").appendChild(choice);
+                   message.innerHTML="<h1 style='color:yellow; font-size:70px;padding:30px;padding-top:80px;'>Tied!!!</h1>";
+                document.getElementById("image-div").appendChild(message);
+                    pc.innerHTML= "<img src='https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300'  style='box-shadow:0px 10px 50px rgba(243,38,24,1);width:250px;' >";
+                document.getElementById("image-div").appendChild(pc); 
+              }
+            }
+           
+         
+             }
+     </script>       
+       
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <div  class="footer"><footer><p>Created by: <b><i>Soham Chakraborty</i></b></p></footer>  </div>
+</body>
+</html>
