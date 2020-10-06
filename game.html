@@ -8,7 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <style>
 .container img:hover {
       box-shadow:0px 10px 50px rgba(0, 50,250,25) ;
        } 
@@ -18,11 +19,11 @@
            justify-content:space-around;
            margin-top: 140px;
            padding-top: 30px;
-          border:5px groove blue;
-          border-style: inset;
+          /*border:5px groove blue;
+          border-style: inset;*/
           height:350px;
           border-radius: 10px;
-          background-color:white;
+          background-color:rgba(8, 146, 105, 0.473);
        }
 
      div.color{
@@ -30,6 +31,9 @@
         display:flex;
         height:620px;
         }  
+
+        
+
       div.footer{
           text-align: end;
           padding-right: 10px;
@@ -45,9 +49,9 @@
   <body >
   <div class="color">
     <div class="container" id="image-div">
-    <img id="rock" src="https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300" height=250 width=250 alt="" onclick="game(rock)">
-    <img id="paper"  src="http://clipartmag.com/images/piece-of-paper-clipart-3.jpg" height=250 width=250 aly="" onclick="game(paper)">
-    <img id="scissors" src="https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300" alt="" width=250 height=250 onclick="game(scissors)">  
+    <img id="rock" data-aos="zoom-in" data-aos-duration="2000" src="https://tse4.mm.bing.net/th?id=OIP.0mOgv0l2Ac5WWcEeyJRWHAHaIS&pid=Api&P=0&w=300&h=300" height=250 width=250 alt="" onclick="game(rock)">
+    <img id="paper" data-aos="zoom-in" data-aos-duration="2000" src="http://clipartmag.com/images/piece-of-paper-clipart-3.jpg" height=250 width=250 aly="" onclick="game(paper)">
+    <img id="scissors" data-aos="zoom-in" data-aos-duration="2000" src="https://tse4.mm.bing.net/th?id=OIP.3tc0BYr7CNBlgwEk09l6VAAAAA&pid=Api&P=0&w=300&h=300" alt="" width=250 height=250 onclick="game(scissors)">  
      </div></div>
      <script type="text/javascript">
         
@@ -181,3 +185,9 @@
     <div  class="footer"><footer><p>Created by: <b><i>Soham Chakraborty</i></b></p></footer>  </div>
 </body>
 </html>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+<script>
+    AOS.init();
+  </script>
+

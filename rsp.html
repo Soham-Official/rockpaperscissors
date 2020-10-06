@@ -8,6 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     div.background{
       background:url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?cs=srgb&dl=flight-landscape-nature-sky-36717.jpg&fm=jpg);
@@ -24,9 +25,12 @@
     font-family: "Lucida Console", Monaco, monospace;
  }
  h1{
-    color:lime;
+   /* color:lime;*/
     font-size:60px;
     font-family: Impact, Charcoal, sans-serif;
+    background: -webkit-linear-gradient(rgb(240, 72, 5), rgba(221, 245, 6, 0.877));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
  }
   div.maindiv{
       text-align:center;
@@ -40,11 +44,13 @@
   <body>
       <div class="background" >
         <div class="maindiv" id="main"> 
-        <h1>Welcome!!!</h1><br>
-        <h2>Rock,Paper and Scissors</h2>
+        <h1 data-aos="fade-down"
+        data-aos-duration="3000">Welcome!!!</h1><br>
+        <h2 data-aos="zoom-in"
+        data-aos-duration="3000">Rock,Paper and Scissors</h2>
         <br>
         <div class="btn-group btn-group-lg">
-        <button class="btn btn-primary" onclick="rpsclick()">Let's Play</a></button></div>
+        <button class="btn btn-primary " onclick="rpsclick()">Let's Play</a></button></div>
    </div>
    </div>
    <script>
@@ -62,3 +68,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+<script>
+    AOS.init();
+  </script>
